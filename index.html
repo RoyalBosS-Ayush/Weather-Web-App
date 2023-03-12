@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Web App by Ayush Munot</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <header>Weather Website</header>
+    <div id="bgImg"></div>
+
+    <main>
+        <div class="container">
+            <form id="search-bar">
+                <input type="text" placeholder="Location">
+                <button type="submit">🔍</button>
+                <div class="background"></div>
+            </form>
+            <div id="weather-container">
+                <div class="background"></div>
+                <div>
+                    <h1 class="weather-header">
+                        <span class="location">Delhi</span>
+                        <span class="weather-header-right">
+                            <span class="weather-header-right-bottom">
+                                <img src="https://openweathermap.org/img/wn/04n.png" alt="" class="icon" height="36"
+                                    width="36" />
+                                <span class="weather-description">haze</span>
+                            </span>
+                        </span>
+                    </h1>
+                    <h2 class="temperature">25°C</h2>
+                </div>
+
+                <div class="weather-footer">
+                    <div class="pressure">Pressure: </div>
+                    <div class="humidity">Humidity: </div>
+                    <div class="feels_like">Feels Like: </div>
+                    <div class="temp_min">Min Temp: </div>
+                    <div class="temp_max">Max Temp: </div>
+                    <div class="wind">Wind Speed: </div>
+                </div>
+            </div>
+        </div>
+        <div class="forcast-container">
+            <div class="background"></div>
+            <div class="forcast-table-container">
+                <table cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Description</th>
+                            <th>Temperature</th>
+                            <th>Pressure</th>
+                            <th>Humidity</th>
+                            <th>Wind Speed</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="d0">Monday</td>
+                            <td>
+                                <div class="icon-container">
+                                    <img src="" class="icon ic0" id="icon" width="24"
+                                        height="24">
+                                    <span class="desc0"></span>
+                                </div>
+                            </td>
+                            <td class="temp0"></td>
+                            <td class="pres0"></td>
+                            <td class="hum0"></td>
+                            <td class="wind0"></td>
+                        </tr>
+                        <tr>
+                            <td class="d1">Tuesday</td>
+                            <td>
+                                <div class="icon-container">
+                                    <img src="" class="icon ic1" id="icon" width="24"
+                                        height="24">
+                                </div>
+                            </td>
+                            <td class="temp1"></td>
+                            <td class="pres1"></td>
+                            <td class="hum1"></td>
+                            <td class="wind1"></td>
+                        </tr>
+                        <tr>
+                            <td class="d2">Wednesday</td>
+                            <td>
+                                <div class="icon-container">
+                                    <img src="" class="icon ic2" id="icon" width="24"
+                                        height="24">
+                                </div>
+                            </td>
+                            <td class="temp2"></td>
+                            <td class="pres2"></td>
+                            <td class="hum2"></td>
+                            <td class="wind2"></td>
+                        </tr>
+                        <tr>
+                            <td class="d3">Thursday</td>
+                            <td>
+                                <div class="icon-container">
+                                    <img src="" class="icon ic3" id="icon" width="24"
+                                        height="24">
+                                </div>
+                            </td>
+                            <td class="temp3"></td>
+                            <td class="pres3"></td>
+                            <td class="hum3"></td>
+                            <td class="wind3"></td>
+                        </tr>
+                        <tr>
+                            <td class="d4">Friday</td>
+                            <td>
+                                <div class="icon-container">
+                                    <img src="" class="icon ic4" id="icon" width="24"
+                                        height="24">
+                                </div>
+                            </td>
+                            <td class="temp4"></td>
+                            <td class="pres4"></td>
+                            <td class="hum4"></td>
+                            <td class="wind4"></td>
+                        </tr>
+                        <tr>
+                            <td class="d5">Saturday</td>
+                            <td>
+                                <div class="icon-container">
+                                    <img src="" class="icon ic5" id="icon" width="24"
+                                        height="24">
+                                </div>
+                            </td>
+                            <td class="temp5"></td>
+                            <td class="pres5"></td>
+                            <td class="hum5"></td>
+                            <td class="wind5"></td>
+                        </tr>
+                        <tr>
+                            <td class="d6">Sunday</td>
+                            <td>
+                                <div class="icon-container">
+                                    <img src="" class="icon ic6" id="icon" width="24"
+                                        height="24">
+                                </div>
+                            </td>
+                            <td class="temp6"></td>
+                            <td class="pres6"></td>
+                            <td class="hum6"></td>
+                            <td class="wind6"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+    <div class="canvas-container">
+        <div class="background"></div>
+        <canvas id="myChart"></canvas>
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>
